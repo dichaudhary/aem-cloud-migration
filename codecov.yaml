@@ -13,4 +13,4 @@ coverage:
         only_pulls: false
   tests:
     paths:
-      - src/main/test/
+      - src/test/
