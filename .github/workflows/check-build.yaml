@@ -22,4 +22,4 @@ jobs:
       - name: Generate code coverage
         run: curl https://codecov.io/bash > codecov.sh
       - name: upload code coverage
-        run: bash codecov.sh
+        run: bash codecov.sh -t 2f1a8f23-8624-4449-adfc-accb600a96a1
