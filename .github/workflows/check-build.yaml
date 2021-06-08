@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
   buildCheck:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: Set up JDK 11
@@ -19,7 +19,3 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Build with Maven
         run: mvn clean install
-      - name: Generate code coverage
-        run: curl https://codecov.io/bash > codecov.sh
-      - name: upload code coverage
-        run: bash codecov.sh
